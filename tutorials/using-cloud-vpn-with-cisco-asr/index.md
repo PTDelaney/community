@@ -53,18 +53,18 @@ referenced, but rather is only intended to assist in the creation of IPsec
 connectivity to Google Cloud Platform (GCP) VPC networks. The following is a
 high level overview of the configuration process which will be covered:
 
-* Configure the base network configurations to establish L3 connectivity
-* Set up the Base VPN configuration, including:
-  * Configure IKEv2 Proposal and Policy
-  * Configure IKEv2 Keyring
-  * Configure IKEv2 profile
-  * Configure IPsec Security Association (SA)
-  * Configure IPsec transform set
-  * Configure IPsec profile
-  * Configure IPsec Static Virtual Tunnel Interface (SVTI)
-  * Configure Static or Dynamic Routing Protocol to route traffic into the IPsec tunnel
-* Testing the IPsec connection
-* Advanced VPN configurations
+*   Configure the base network configurations to establish L3 connectivity
+*   Set up the Base VPN configuration, including:
+    *   Configure IKEv2 Proposal and Policy
+    *   Configure IKEv2 Keyring
+    *   Configure IKEv2 profile
+    *   Configure IPsec Security Association (SA)
+    *   Configure IPsec transform set
+    *   Configure IPsec profile
+    *   Configure IPsec Static Virtual Tunnel Interface (SVTI)
+    *   Configure Static or Dynamic Routing Protocol to route traffic into the IPsec tunnel
+*   Testing the IPsec connection
+*   Advanced VPN configurations
 
 ### Getting started
 
@@ -178,16 +178,16 @@ to establish BGP sessions between the 2 peers.
     configure the peer network firewall to allow inbound traffic from your
     Compute Engine prefixes.
 
-    * Go to the [Firewall rules](https://console.cloud.google.com/networking/firewalls)
-      page.
-    * Click **Create firewall rule**.
-    * Populate the following fields:
-      * **Name:** `vpnrule1`
-      * **VPC network:** `my-network`
-      * **Source filter:** IP ranges.
-      * **Source IP ranges:** The peer ranges to accept from the peer VPN gateway.
-      * **Allowed protocols and ports:** tcp;udp;icmp
-    * Click **Create**.
+    a.  Go to the [Firewall rules](https://console.cloud.google.com/networking/firewalls)
+        page.
+    a.  Click **Create firewall rule**.
+    a.  Populate the following fields:
+        * **Name:** `vpnrule1`
+        * **VPC network:** `my-network`
+        * **Source filter:** IP ranges.
+        * **Source IP ranges:** The peer ranges to accept from the peer VPN gateway.
+        * **Allowed protocols and ports:** tcp;udp;icmp
+    a.  Click **Create**.
 
 #### Using the `gcloud` command-line tool
 
@@ -332,17 +332,17 @@ command-line tool. The upcoming section provide details to both in detail below:
     configure the peer network firewall to allow inbound traffic from your
     Compute Engine prefixes.
 
-    * Go to the [Firewall rules](https://console.cloud.google.com/networking/firewalls)
-      page.
-    * Click **Create firewall rule**.
-    * Populate the following fields:
-      * **Name:** `vpnrule1`
-      * **VPC network:** `vpn-scale-test-cisco`
-      * **Source filter:** IP ranges.
-      * **Source IP ranges:** The peer ranges to accept from the peer VPN
-        gateway.
-      * **Allowed protocols and ports:** `tcp;udp;icmp`
-    * Click **Create**.
+    a.  Go to the [Firewall rules](https://console.cloud.google.com/networking/firewalls)
+        page.
+    a.  Click **Create firewall rule**.
+    a.  Populate the following fields:
+        * **Name:** `vpnrule1`
+        * **VPC network:** `vpn-scale-test-cisco`
+        * **Source filter:** IP ranges.
+        * **Source IP ranges:** The peer ranges to accept from the peer VPN
+          gateway.
+        * **Allowed protocols and ports:** `tcp;udp;icmp`
+    a.  Click **Create**.
 
 #### Using the `gcloud` command-line tool
 
